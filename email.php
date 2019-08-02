@@ -1,8 +1,16 @@
 <?php
-    use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'phpmail/Exception.php';
+if (!$_POST) {
+    header("Location: emailform.php");
+}
+$toemail=$_REQUEST['to'];
+$subject=$_REQUEST['subject'];
+$msg=$_REQUEST['msg'];
+    
+
+    require 'phpmail/Exception.php';
 require 'phpmail/PHPMailer.php';
 
     require 'phpmail/SMTP.php';
@@ -16,10 +24,10 @@ require 'phpmail/PHPMailer.php';
         $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
         $mail->Port       = 587;
         $mail->setFrom('sarmila2basnet@gmail.com', "cutie pie");
-        $mail->addAddress('sarmila2basnet@gmail.com', "moti");
-        $mail->addAddress('subihanideepa@gmail.com', "de");
-        $mail->Subject="hello get well soon";
-        $mail->Body="hi de how r u get well soon . missin g u lots!!!! see u soon.";
+        $mail->addAddress($toemail, "Dear Customer");
+        
+        $mail->Subject=$subject;
+        $mail->Body=$msg;
         $mail->send();
         echo 'email sent';
     } catch (Exception $e) {
