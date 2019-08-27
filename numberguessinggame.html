@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .t {
+            text-align: center;
+            display: block;
+            height: 40px;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        var mem = Math.floor(Math.random() * 100);
+        var c=7;
+        //document.write(mem);
+    </script>
+
+</head>
+
+<body>
+    <div class="container jumbotron text-center">
+        <h1 class="text-success">I have one number between 1 and 100 can you guess it?</h1>
+        <h2>you have 7 chances</h2>
+        <div class="t">
+            <input type="text" id="num" placeholder="Please Guess a number" class=" t form-control w-50 ">
+
+        </div>
+
+        <button type="submit" class="btn btn-primary m-2" onclick="play()">Guess</button>
+        
+        <h3 id="ans"></h3>
+    </div>
+    <script>
+
+        function play() {
+          
+            if((c-1)==0)
+            {
+                document.getElementById("ans").innerHTML = "Ta haris!! thik uttar  "+mem +"  ho"; 
+                document.getElementById("ans").innerHTML+="<br> bujhis Murkha Manusya!!!";
+                return;
+                document.getElementById("ans").style.color="red"
+            }
+            var num = document.getElementById("num").value;
+           
+            if(num=="")
+            {
+                alert("khoi ta number haleko?? huh????");
+                return;
+            }
+            if(num!=parseInt(num))
+            {
+                alert("k haley ko murkha manis?? think sanga khel!!!");
+                return;
+            }
+            if (num > mem) {
+                var reply= "dherai bho !!! Murkha  manusya";
+                 reply+="<br> ta sanga aba "+(c-1).toString()+ " chance baki chha";
+                 document.getElementById("ans").innerHTML=reply;
+                 document.getElementById("ans").style.color="red"
+            }
+            else if (num < mem) {
+                var reply = "kam bho!!! Murkha  manusya";
+                reply+="<br>ta sanga aba " +(c-1).toString()+ " chance baki chha";
+                document.getElementById("ans").innerHTML=reply;
+            }
+            else {
+                 reply  = "Sybash Buddhiman manusya thik bhanis";
+               
+                document.getElementById("ans").innerHTML=reply;
+                document.getElementById("ans").style.color="green"
+                return;
+            }
+            c--;
+        }
+
+
+    </script>
+</body>
+
+</html>
