@@ -6,40 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    <h1 id="x" onclick="call()"> don't touch it</h1>
-    <h1 id="y" onmouseup="time()">la lala la</h1>
-    <button  onclick="displayDate()"> for date</button>
-    <p id="z"></p>
+    <h1 id="x">this is heading</h1>
+    <input type="text" onkeyup="whatype()" id="y">
+    <button onmouseup="call()">this is button</button>
+    <input type="text" onkeyup="makeveryveryverysmall()" onblur="bhat()" onfocus="chiura()" id="z">
     <div id="demo"></div>
-    <div onmouseover="mm()" onmouseout="nn()">move a mouse</div>
-    <input type="text" id="a" onkeyup="let()">
     <script>
-    function call()
-    {
-        document.getElementById("x").innerHTML="ohh";
-        document.getElementById("x").style.backgroundColor="blue";
-    }
-    function time()
-    {
-        document.getElementById("y").innerHTML="ha haha ha";
-    }
-    function displayDate()
-    {
-        document.getElementById("z").innerHTML=Date();
-    }
-    window.addEventListener("resize", function(){
-    document.getElementById("demo").innerHTML= window.outerWidth+"x"+window.outerHeight;
-    });
-    function let(){
-        document.getElementById("a").value=document.getElementById("a").value.toUpperCase();
-    }
+        function call() {
+            document.getElementById("x").innerHTML = "you clicked";
+            document.getElementById("x").style.backgroundColor = "red";
+            document.getElementById("x").innerHTML = "";
+        }
+        function whatype() {
+            alert(document.getElementById("y").value);
+        }
+
+        function makeveryveryverysmall() {
+            document.getElementById("z").value = document.getElementById("z").value.toUpperCase();
+        }
+        function chiura() {
+            document.getElementById("z").style.backgroundColor = "#bca";
+        }
+        function bhat() {
+            document.getElementById("z").style.backgroundColor = "white";
+        }
+        window.addEventListener("resize", function () {
+            document.getElementById("demo").innerHTML = window.outerWidth + " x " + window.outerHeight;
+        });
     </script>
-    <script>
-    function mm()
-    {
-        document.getElementById("")
-    }
-    </script>
+
 </body>
+
 </html>

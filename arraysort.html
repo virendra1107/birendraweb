@@ -7,31 +7,35 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>alpha order</h1>
-    <p id="x"></p>
-    <p id="y"></p>
     <script>
-        var fruits = ["Banana", "Orange", "Apple", "Mango"];
-document.getElementById("x").innerHTML = fruits;
+    
+    x=[2,1,4,7,5,9,3];
+   // x.sort(function(a,b){
+   //     return b-a;
+   // })
 
-function myFunction() {
-    fruits.sort();
-    fruits.reverse();
-    document.write(fruits);
-}
-    </script>
-    <h1>numerical order</h1>
-    <p id="demo"></p>
-    <script>
-        var points = [40, 100, 1, 5, 25, 10];
-document.getElementById("demo").innerHTML = points;  
 
-function myFunction1() {
-points.sort((a,b)=>b-a);
-  document.getElementById("demo").innerHTML = points;
-}
-myFunction();
-myFunction1();
+  // x.sort((a,b)=>a-b);
+
+ // y=x.map(function(a){return a+5;} );
+
+y=x.map(a=>a+5);
+    document.write(y);
+
+
     </script>
+
+<p id="demo"></p>
+
+<script>
+var numbers1 = [45, 4, 9, 16, 25];
+var numbers2 = numbers1.map(function(c){return c*2});
+
+document.getElementById("demo").innerHTML = numbers2;
+
+function myFunction(value) {
+  return value * 2;
+}
+</script>
 </body>
 </html>
