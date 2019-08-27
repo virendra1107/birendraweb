@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="x" onclick="call()"> don't touch it</h1>
+    <h1 id="y" onmouseup="time()">la lala la</h1>
+    <button  onclick="displayDate()"> for date</button>
+    <p id="z"></p>
+    <div id="demo"></div>
+    <div onmouseover="mm()" onmouseout="nn()">move a mouse</div>
+    <input type="text" id="a" onkeyup="let()">
+    <script>
+    function call()
+    {
+        document.getElementById("x").innerHTML="ohh";
+        document.getElementById("x").style.backgroundColor="blue";
+    }
+    function time()
+    {
+        document.getElementById("y").innerHTML="ha haha ha";
+    }
+    function displayDate()
+    {
+        document.getElementById("z").innerHTML=Date();
+    }
+    window.addEventListener("resize", function(){
+    document.getElementById("demo").innerHTML= window.outerWidth+"x"+window.outerHeight;
+    });
+    function let(){
+        document.getElementById("a").value=document.getElementById("a").value.toUpperCase();
+    }
+    </script>
+    <script>
+    function mm()
+    {
+        document.getElementById("")
+    }
+    </script>
+</body>
+</html>

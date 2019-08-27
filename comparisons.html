@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<p id=a></p>
+    <script>
+        var x=10;
+        document.getElementById("a").innerHTML= (x==8);
+    </script>
+    <p id="b"></p>
+    <script>
+        var x= 5;
+        document.getElementById("b").innerHTML=(x===5);
+
+    </script>
+    <p id="c"></p>
+    <script>
+        var x=8;
+        document.getElementById("c").innerHTML=(x!=5);
+    </script>
+    <p id="d"></p>
+    <script>
+        var x=4;
+        document.getElementById("d").innerHTML=(x>3);
+    </script>
+    <p id="e"></p>
+    <script>
+        var x=5;
+        document.getElementById("e").innerHTML=(x<7);
+
+    </script>
+    <p id="f"></p>
+    <script>
+        var x=7;
+        document.getElementById("f").innerHTML=(x>=7);
+    </script>
+    <p id="g"></p>
+    <script>
+        var x=4;
+        var y=7;
+        document.getElementById("g").innerHTML=
+        (x<5&&y>5)+"<br>"+
+        (x<5&&y>9);
+
+    </script>
+    <p id="h"></p>
+    <script>
+        var x=4;
+        var y=5;
+        document.getElementById("h").innerHTML=
+        (x<5||y<4)+"<br>"+
+        (x==5||y==5);
+    </script>
+    <p id="i"></p>
+    <script>
+        var x=4;
+        var y=5;
+        document.getElementById("i").innerHTML=!(x==y);
+    </script>
+</body>
+</html>
