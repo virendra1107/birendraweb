@@ -18,9 +18,9 @@
         }
     </style>
     <script>
-        var mem = Math.floor(Math.random() * 100);
+        var mem = Math.floor(Math.random() * 50);
         var c=7;
-        //document.write(mem);
+       // document.write(mem);
     </script>
 
 </head>
@@ -42,15 +42,11 @@
 
         function play() {
           
-            if((c-1)==0)
-            {
-                document.getElementById("ans").innerHTML = "Ta haris!! thik uttar  "+mem +"  ho"; 
-                document.getElementById("ans").innerHTML+="<br> bujhis Murkha Manusya!!!";
-                return;
-                document.getElementById("ans").style.color="red"
-            }
-            var num = document.getElementById("num").value;
+          var repl="";
+          var correct=0;
            
+            var num = document.getElementById("num").value;
+        
             if(num=="")
             {
                 alert("khoi ta number haleko?? huh????");
@@ -73,12 +69,20 @@
                 document.getElementById("ans").innerHTML=reply;
             }
             else {
-                 reply  = "Sybash Buddhiman manusya thik bhanis";
-               
-                document.getElementById("ans").innerHTML=reply;
+                correct=1;
+                 reply1  = "Sybash Buddhiman manusya thik bhanis";               
+                document.getElementById("ans").innerHTML=reply1;
                 document.getElementById("ans").style.color="green"
-                return;
+                
             }
+            if((c-1)==0&& correct!=1)
+            {
+                repl+= "Ta haris!! thik uttar  "+mem +"  ho"; 
+                repl+="<br> bujhis Murkha Manusya!!!";
+                document.getElementById("ans").innerHTML=repl;
+                document.getElementById("ans").style.color="red"
+            }
+            
             c--;
         }
 
