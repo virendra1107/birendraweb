@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i;
+        for(i=0; i<=10; i++)
+        {
+            if (i===5) {break;}
+            document.write(i);
+        }
+        </script>
+        <script>
+        var i;
+        for(i=10; i>=0; i--)
+        {
+            if (i===6){continue;}
+            document.write(i);
+        }
+        </script>
+        <p id="demo"></p>
+        <script>
+                var cars = ["BMW", "Volvo", "Saab", "Ford"];
+                var text = "";
+                
+                list: {
+                  text += cars[0] + "<br>"; 
+                  text += cars[1] + "<br>"; 
+                  break list;
+                  text += cars[2] + "<br>"; 
+                  text += cars[3] + "<br>"; 
+                }
+                
+                document.getElementById("demo").innerHTML = text;
+                </script>
+</body>
+</html>

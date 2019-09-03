@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="x"></p>
+    <script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("x").innerHTML = fruits;
+
+function myFunction1() {
+    fruits.sort();
+    document.write(fruits);
+}  
+myFunction1();
+
+    </script>
+    <p id="y"></p>
+    <script>
+     var points = [40, 100, 1, 5, 25, 10];
+document.getElementById("y").innerHTML = points;  
+function myfunction2(){
+    points.sort((a,b)=>a-b);
+    document.write(points);
+}
+    myfunction2();
+    </script>
+    <h1>lowest value</h1>
+    <p id="z"></p>
+    <script>
+     var points = [40, 100, 1, 5, 25, 10];
+document.getElementById("z").innerHTML = points;  
+function myfunction3(){
+    points.sort((a,b)=>a-b);
+    document.write(points[0]);}
+   myfunction3();
+    </script>
+    <p ="z"></p>
+    <script>
+     var points = [40, 100, 1, 5, 25, 10];
+document.getElementById("z").innerHTML = myArrayMax(points);
+
+function myArrayMax(arr) {
+  return Math.max.apply(null, arr);
+}
+myArrayMax(rr);
+    
+}
+ myfunction4();
+    </script>
+
+</body>
+</html>

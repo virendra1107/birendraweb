@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=script, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="a"></p>
+    <p id="b"></p>
+    <script>
+        document.getElementById("a").innerHTML= Math.random();
+        document.getElementById("b").innerHTML=Math.floor(Math.random()*10)
+        function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+    </script>
+</body>
+</html>

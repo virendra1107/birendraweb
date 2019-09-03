@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>join function</h1>
+    <p id="x"></p>
+    <p id="y"></p>
+    
+    <script>
+        var fruit= ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        document.getElementById("x").innerHTML="orginalfruit : "+
+        fruit.toString();
+        document.getElementById("y").innerHTML=fruit.join("*");
+    </script>
+    <h1>pop element</h2>
+        <p id="o"></p>
+    <p id="a"></p>
+    <p id="b"></p>
+    <script>
+            var fruit= ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+            document.getElementById("o").innerHTML=fruit;
+            document.getElementById("a").innerHTML=
+            fruit.pop();
+            document.getElementById("b").innerHTML=fruit;
+        </script>
+        <h1> pushing element</h1>
+        <p id="f"></p>
+        <p id="g"></p>
+        <p id="h"></p>
+        <script>
+             var fruit= ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+                 document.getElementById("g").innerHTML=fruit;
+                 fruit.push("kiwi");
+                 document.getElementById("h").innerHTML=fruit;
+           
+            </script>
+        <h1>
+            shifting element
+        </h1>
+        <p id="m"></p>
+        <p id="n"></p>
+
+            <script>
+              var fruit= ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+             document.getElementById("m").innerHTML=fruit;
+             fruit.shift();
+             document.getElementById("n").innerHTML=fruit;
+            </script>
+             <h1>unshifting element</h1>
+             <p id="p"></p>
+             <p id="q"></p>
+             <script>
+                    var fruit= ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+                   document.getElementById("p").innerHTML=fruit;
+                   fruit.unshift("kiwi");
+                   document.getElementById("q").innerHTML=fruit;
+                  </script>
+                  <h1>changing element</h1>
+                  <p id="r"></p>
+                  <p id="s"></p>
+                  <script>
+                        var fruit= ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+                       document.getElementById("r").innerHTML=fruit;
+                       fruit[1]="kiwi";
+                       document.getElementById("s").innerHTML=fruit;
+                      </script>
+                      <p id="t"></p>
+                      <p id="u"></p>
+                       <script>
+                            var fruit= ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+                           document.getElementById("t").innerHTML=fruit;
+                           fruit[fruit.length]="kiwi";
+                           document.getElementById("u").innerHTML=fruit;
+                          </script>
+                          <h1>delecting element</h1>
+                          <p id="v"></p>
+                          <p id="w"></p>
+                           <script>
+                                var fruit= ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+                               document.getElementById("v").innerHTML=fruit;
+                               delete fruit[0];
+                               document.getElementById("w").innerHTML=fruit;
+                              </script>
+                              <h1>spliceing element</h1>
+                              <p id="x"></p>
+                              <p id="y"></p>
+                              <script>
+                                    var fruit= ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+                                   document.getElementById("x").innerHTML=fruit;
+                                   fruit.splice(0,1);
+                                   document.getElementById("y").innerHTML=fruit;
+                                  </script>
+</body>
+</html>  
