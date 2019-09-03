@@ -108,14 +108,19 @@
                 $('.suru').css("display", "none");
                 init();
             })
+            var re = false;
             $('#replay').click(init);
             function init() {
                 min = parseInt(document.getElementById("min").value);
                 max = parseInt(document.getElementById("max").value);
 
                 c = parseInt(document.getElementById("chance").value);
+                if (re) {
+                    c = prompt("tero min: " + min + " ani max " + max + "   aba bhan kati chance linchhas")
+                }
 
 
+                document.getElementById("chance").value = "";
 
                 if (isNaN(max)) {
                     max = 100;
@@ -148,6 +153,7 @@
                 document.getElementById("ans").innerHTML = "";
             }
             function play() {
+                re = true;
                 document.getElementById("x").innerHTML = c;
                 var repl = "";
                 var correct = 0;
