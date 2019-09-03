@@ -35,10 +35,16 @@
         </div>
 
         <button type="submit" class="btn btn-primary m-2" onclick="play()">Guess</button>
+        <button  type="button" class="btn btn-secondary" on click=" time()">reset</button>
         
         <h3 id="ans"></h3>
     </div>
     <script>
+        function time()
+        {
+            mem = Math.floor(Math.random() * 100);
+         c=7;
+        }
 
         function play() {
           
